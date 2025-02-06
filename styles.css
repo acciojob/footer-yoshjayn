@@ -1,1 +1,131 @@
-/* your code here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background: #111;
+    color: white;
+    padding: 20px 0;
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.logo_name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Social Media Icons */
+.media-icons a {
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Social Media Colors */
+.fa-facebook { background: #3b5998; }  /* Facebook Blue */
+.fa-twitter { background: #55acee; }  /* Twitter Light Blue */
+.fa-instagram { background: #e4405f; }  /* Instagram Pink */
+.fa-linkedin { background: #0077b5; }  /* LinkedIn Blue */
+.fa-youtube { background: #ff0000; }  /* YouTube Red */
+
+/* Links Section */
+.link-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.box {
+    list-style: none;
+    width: 22%;
+}
+
+.box .link_name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Half Underline Effect */
+.box a {
+    text-decoration: none;
+    color: #bbb;
+    position: relative;
+}
+
+/* .box a::after { */
+.box .link_name::after{
+    content: "";
+    display: block;
+    width: 20%;
+    height: 2px;
+    background: white;
+    margin-top: 3px;
+    transition: width 0.3s ease-in-out;
+}
+
+.box a:hover::after {
+    width: 100%;
+}
+
+.box a:hover {
+    color: white;
+}
+
+/* Bottom Copyright Section */
+.bottom-details {
+    background: #222;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10%;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
+
+.bottom-details p, .bottom-details a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.bottom-details a:hover {
+    color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .link-boxes {
+        flex-direction: column;
+        text-align: center;
+    }
+    .box {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .bottom-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
